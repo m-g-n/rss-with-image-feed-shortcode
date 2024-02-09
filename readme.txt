@@ -11,8 +11,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 == Description ==
 
 This plugin can add and display eyecatch images from rss feed including images.
+The shortcode is `[rss-with-image]` and can be set with the following parameters.
 
 アイキャッチ画像を含む RSS フィードからデータを取得して出力するショートコードを提供します。
+ショートコードは `[rss-with-image]` で、以下のパラメータで設定が可能です。
 
 = Parameters =
 
