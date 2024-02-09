@@ -20,7 +20,7 @@ This plugin can add and display eyecatch images from rss feed including images.
 'count'    : Number of articles to retrieve. (enter an integer)
 'img'      : Image if image could not be retrieved. (Enter URL)
 'arealink' : Whether the link should be to the whole card or only post title. (true to enable)
-'author'   : Whether to display the contributor's name or not. (true to enable)
+'author'   : Whether to display the post author's name or not. (true to enable)
 'excerpt'  : Whether to display excerpts. (true to enable)
 
 = パラメータ =
