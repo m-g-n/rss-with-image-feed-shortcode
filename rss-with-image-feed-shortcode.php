@@ -2,7 +2,7 @@
 /**
  * Plugin name: Rss With Image Feed Shortcode
  * Description: アイキャッチ画像を含む RSS フィードからデータを取得して出力するショートコード
- * Version: 0.0.2
+ * Version: 0.0.3
  *
  * @package rss-with-image-feed-shortcode
  * @author mgn Co.,Ltd.
