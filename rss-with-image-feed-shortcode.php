@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin name: Rss With Image Feed Shortcode
- * Description: アイキャッチ画像を含む RSS フィードからデータを取得して出力するショートコード
+ * Description: アイキャッチ画像を含む RSS フィードからデータを取得して出力するショートコード `[rss-with-image]` を追加します。
  * Author: mgn Co.,Ltd.
  * Version: 0.0.3
  * Author URI: https://www.m-g-n.me/
