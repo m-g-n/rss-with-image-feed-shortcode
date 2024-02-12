@@ -28,6 +28,8 @@ if ( ! function_exists( 'get_rss_feed_tag' ) ) :
 				'author'   => false,
 				// 抜粋を表示するかどうか.
 				'excerpt'  => false,
+				// `aline***` のクラス付与
+				'align'    => null,
 			),
 			$atts,
 			'rss-with-image'
@@ -64,12 +66,26 @@ if ( ! function_exists( 'get_rss_feed_tag' ) ) :
 			$data_excerpt = false;
 		}
 
+		$align = (string) $atts['align'];
+
+		if ( 'full' === $align ) {
+			$data_align = 'alignfull';
+		} elseif ( 'wide' === $align ) {
+			$data_align = 'alignwide';
+		} elseif ( 'left' === $align ) {
+			$data_align = 'alignleft';
+		} elseif ( 'right' === $align ) {
+			$data_align = 'alignright';
+		} else {
+			$data_align = null;
+		}
+
 		// RSS の取得.
 		$rss = simplexml_load_file( $feed_url, 'SimpleXMLElement' );
 
 		ob_start();
 		?>
-<ul class="rwifs-rss-feed" data-arealink="<?php echo esc_attr( $data_arealink ); ?>">
+<ul class="rwifs-rss-feed<?php if ( null !== $data_align ) echo esc_attr( ' ' . $data_align ); // phpcs:ignore ?>" data-arealink="<?php echo esc_attr( $data_arealink ); ?>">
 		<?php
 		// 変数の宣言.
 		$i = 0;
