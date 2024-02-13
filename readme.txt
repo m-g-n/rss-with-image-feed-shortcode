@@ -3,7 +3,7 @@ Contributors: mgn Co.,Ltd.
 Tags: rss, shortcode, image, eyecatch
 Requires at least: 6.4 or higher
 Tested up to: 6.4.0
-Stable tag: 0.0.3
+Stable tag: 0.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,8 +22,10 @@ The shortcode is `[rss-with-image]` and can be set with the following parameters
 'count'    : Number of articles to retrieve. (enter an integer)
 'img'      : Image if image could not be retrieved. (Enter URL)
 'arealink' : Whether the link should be to the whole card or only post title. (true to enable)
+'target'   : Whether to open the link in a new tab. (true to enable)
 'author'   : Whether to display the post author's name or not. (true to enable)
 'excerpt'  : Whether to display excerpts. (true to enable)
+'align'    : Add `align***` class to the outer frame `rwifs-rss-feed` of the block.
 
 = パラメータ =
 
@@ -31,8 +33,10 @@ The shortcode is `[rss-with-image]` and can be set with the following parameters
 'count'    : 取得する記事の数. (整数を入力)
 'img'      : 画像が取得できなかった場合の画像. (URL を入力)
 'arealink' : リンクをカード全体かタイトル部分だけにするかどうか. (true で有効)
+'target'   : リンクを別タブで開くかどうか. (true で有効)
 'author'   : 投稿者名を表示するかどうか. (true で有効)
 'excerpt'  : 抜粋を表示するかどうか. (true で有効)
+'align'    : ブロックの外枠 `rwifs-rss-feed` に `align***` クラスを付与
 
 = default =
 
@@ -40,8 +44,10 @@ The shortcode is `[rss-with-image]` and can be set with the following parameters
 'count'    : 3
 'img'      : /images/no-image.png
 'arealink' : false
+'target'   : false
 'author'   : false
 'excerpt'  : false
+'align'    : null
 
 
 == Installation ==
