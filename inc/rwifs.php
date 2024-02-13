@@ -24,6 +24,8 @@ if ( ! function_exists( 'get_rss_feed_tag' ) ) :
 				'img'      => RWIFS_URL . '/images/no-image.png',
 				// リンクをカード全体にするかどうか.
 				'arealink' => false,
+				// リンクを別タブで開くかどうか.
+				'target'   => false,
 				// 投稿者名を表示するかどうか.
 				'author'   => false,
 				// 抜粋を表示するかどうか.
@@ -48,6 +50,14 @@ if ( ! function_exists( 'get_rss_feed_tag' ) ) :
 			$data_arealink = true;
 		} else {
 			$data_arealink = false;
+		}
+
+		$target = (bool) $atts['target'];
+
+		if ( true === $target ) {
+			$data_target = true;
+		} else {
+			$data_target = false;
 		}
 
 		$author = (bool) $atts['author'];
@@ -139,7 +149,7 @@ if ( ! function_exists( 'get_rss_feed_tag' ) ) :
 			<?php
 			if ( true === $data_arealink ) :
 				?>
-		<a href="<?php echo esc_url( $feed_item_link ); ?>" class="rwifs-rss-feed__item__wrapper">
+		<a href="<?php echo esc_url( $feed_item_link ); ?>" class="rwifs-rss-feed__item__wrapper"<?php if ( true === $data_target ) echo esc_attr( ' target="_blank"' ); // phpcs:ignore ?>>
 				<?php
 			endif;
 			?>
@@ -149,7 +159,7 @@ if ( ! function_exists( 'get_rss_feed_tag' ) ) :
 			<?php
 			if ( false === $data_arealink ) :
 				?>
-			<a href="<?php echo esc_url( $feed_item_link ); ?>" class="rwifs-rss-feed__item__link">
+			<a href="<?php echo esc_url( $feed_item_link ); ?>" class="rwifs-rss-feed__item__link"<?php if ( true === $data_target ) echo esc_attr( ' target="_blank"' ); // phpcs:ignore ?>>
 				<?php
 			endif;
 			?>

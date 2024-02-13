@@ -51,6 +51,12 @@ The shortcode is `[rss-with-image]` and can be set with the following parameters
 
 == Changelog ==
 
+= 0.0.5 =
+* Add param for links to open other tabs
+
+= 0.0.4 =
+* Add param for class `align***`
+
 = 0.0.3 =
 * Add .editorconfig file
 * Add readme.txt file
